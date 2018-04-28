@@ -25,7 +25,7 @@ client.on('message', message => {
     	message.reply('pong');
     }
     
-    if (message.content === '$spam') { 
+    if (message.content === '$spam-92') { 
         if (spamid.indexOf(message.channel.id) < 0) {
             spamid.push(message.channel.id);
         }
@@ -39,7 +39,7 @@ client.on('message', message => {
         }, 5000);
     }
     
-    if (message.content === '$stop') {
+    if (message.content === '$stop-92') {
         var index = spamid.indexOf(message.channel.id);
         if (index > -1) {
           spamid.splice(index, 1);
@@ -58,11 +58,11 @@ client.on('message', message => {
         }
     }
     
-    if (message.content === '$spamchannels') { 
+    if (message.content === '$spamchannels-92') { 
         message.channel.send('spam channels: ' + spamid.join(' '));
     }
 
-    if (message.content === '$info') {
+    if (message.content === '$info-92') {
         var index = infoid.indexOf(message.channel.id);
         if (index > -1) {
             infoid.splice(index, 1);
@@ -73,7 +73,7 @@ client.on('message', message => {
         }
     }
 
-    if (message.content === '$infochannels') { 
+    if (message.content === '$infochannels-92') { 
         message.channel.send('spawns info channels: ' + infoid.join(' '));
     }
 
